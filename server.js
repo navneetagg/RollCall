@@ -11,14 +11,12 @@ const attendanceRoutes = require('./routes/attendance');
 const app = express();
 
 
-// Replace app.use(cors()) with:
+
 app.use(cors({
-  origin: ['https://rollcall-frontend-theta.vercel.app/', 'http://localhost:3000'],
-  credentials: true,
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
-app.options('*', cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
