@@ -13,7 +13,7 @@ const app = express();
 
 // Replace app.use(cors()) with:
 app.use(cors({
-  origin: ['https://rollcall-frontend-theta.vercel.app/', 'http://localhost:3000'],
+  origin: '*',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
